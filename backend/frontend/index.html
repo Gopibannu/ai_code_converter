@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Code Converter</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>AI Code Converter</h1>
+    <p>Convert code between languages instantly using AI</p>
+  </header>
+
+  <main class="card">
+    <div class="controls">
+      <div class="select-group">
+        <label>From</label>
+        <select id="sourceLang">
+          <option>Python</option>
+          <option>JavaScript</option>
+          <option>Java</option>
+          <option>C</option>
+          <option>C++</option>
+        </select>
+      </div>
+
+      <div class="select-group">
+        <label>To</label>
+        <select id="targetLang">
+          <option>JavaScript</option>
+          <option>Python</option>
+          <option>Java</option>
+          <option>C</option>
+          <option>C++</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="editors">
+      <textarea
+        id="inputCode"
+        placeholder="Paste your source code here..."
+      ></textarea>
+
+      <textarea
+        id="outputCode"
+        placeholder="Converted code will appear here..."
+        readonly
+      ></textarea>
+    </div>
+
+    <div class="bottom">
+      <input
+        type="text"
+        id="prompt"
+        placeholder="Optional instruction (e.g. optimize, keep simple)"
+      />
+      <button id="convertBtn">Convert</button>
+      <span id="status"></span>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
